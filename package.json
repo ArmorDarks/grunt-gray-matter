@@ -1,0 +1,32 @@
+{
+  "name": "grunt-gray-matter",
+  "version": "1.0.0",
+  "description": "A Grunt plugin for extracting data header from file contents using Gray Matter",
+  "homepage": "https://github.com/ArmorDarks/grunt-gray-matter",
+  "author": "Serj Lavrin (https://github.com/ArmorDarks)",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/ArmorDarks/grunt-gray-matter.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArmorDarks/grunt-gray-matter/issues"
+  },
+  "license": "Apache-2.0",
+  "keywords": [
+    "grunt",
+    "javascript",
+    "es6",
+    "gray-matter",
+    "front-matter"
+  ],
+  "dependencies": {
+    "chalk": "1.1.3",
+    "gray-matter": "2.1.0",
+    "lodash": "4.17.4"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "scripts": {}
+}
