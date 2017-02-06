@@ -1,7 +1,7 @@
 grunt-gray-matter
 =================
 
-> A Grunt plugin for extracting data header from file contents using Gray Matter
+> A Grunt task for extracting data header from file contents using Gray Matter
 
 Sorry folks, no details instructions yet.
 
