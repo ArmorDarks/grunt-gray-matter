@@ -32,3 +32,6 @@ node_modules
 
 ## Sass
 .sass-cache
+
+## Build folder
+build
