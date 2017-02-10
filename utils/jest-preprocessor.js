@@ -1,6 +1,4 @@
-/*
-Enable testing with coffescript files & React
-*/
+// Enable testing with coffescript files
 
 const coffee = require('coffee-script')
 
