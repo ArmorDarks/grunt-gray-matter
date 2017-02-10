@@ -39,6 +39,7 @@
   },
   "scripts": {
     "test": "jest",
+    "test:watch": "jest --watch"
   },
   "babel": {
     "presets": [
