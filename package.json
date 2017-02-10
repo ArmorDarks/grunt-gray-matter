@@ -24,9 +24,32 @@
     "gray-matter": "2.1.0",
     "lodash": "4.17.4"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-jest": "18.0.0",
+    "babel-preset-latest": "^6.22.0",
+    "jest": "18.1.0",
+  },
   "engines": {
     "node": ">=4.0.0"
   },
-  "scripts": {}
+  "scripts": {
+    "test": "jest"
+  },
+  "babel": {
+    "presets": [
+      "latest"
+    ]
+  },
+  "jest": {
+    "automock": false,
+    "moduleFileExtensions": [
+      "coffee",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.js?$": "babel-jest",
+      "^.+\\.coffee$": "<rootDir>/utils/jest-preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(coffee|js)?$"
+  }
 }
