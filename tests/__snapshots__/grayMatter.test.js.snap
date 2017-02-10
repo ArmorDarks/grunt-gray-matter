@@ -1,0 +1,137 @@
+exports[`Gray Matter task should produce correct matter file with defaults for multiple nested pages 1`] = `
+Object {
+  "tests/fixtures/nested/level1/level3/page4": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page4",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/nested/level1/level3/page5": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page5",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/nested/level1/page3": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page3",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/nested/level1/pageWithoutMatter": Object {
+    "html": Object {},
+  },
+  "tests/fixtures/nested/page1": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page1",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/nested/page2": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page2",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter file with defaults for multiple pages 1`] = `
+Object {
+  "tests/fixtures/multiple/page1": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page1",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/multiple/page2": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page2",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/multiple/page3": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page3",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+  "tests/fixtures/multiple/pageWithoutMatter": Object {
+    "html": Object {},
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter file with defaults for single page 1`] = `
+Object {
+  "tests/fixtures/single/page": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
