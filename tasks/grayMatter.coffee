@@ -1,4 +1,4 @@
-matter = require('gray-matter')
+{ read } = require('gray-matter')
 { set } = require('lodash')
 { cyan } = require('chalk')
 
@@ -22,6 +22,7 @@ module.exports = (grunt) ->
       grunt.log.error('No files specified.')
       return
 
+    { preprocessPath, preprocessMatterData, preprocessData } = options
     data = {}
     filedest = null
     processedFiles = []
@@ -34,20 +35,20 @@ module.exports = (grunt) ->
         return
 
       file.src.forEach (src) =>
-        matterData = matter.read(src, options).data
+        matterData = read(src, options).data
         path = src.replace(options.baseDir, '')
 
-        if typeof options.preprocessPath == 'function'
-          path = options.preprocessPath.call(file, path, src)
+        if typeof preprocessPath == 'function'
+          path = preprocessPath.call(file, path, src)
 
-        if typeof options.preprocessMatterData == 'function'
-          matterData = options.preprocessMatterData.call(file, matterData, path, src)
+        if typeof preprocessMatterData == 'function'
+          matterData = preprocessMatterData.call(file, matterData, path, src)
 
         set(data, path, matterData)
         processedFiles.push(src)
 
-    if typeof options.preprocessData == 'function'
-      data = options.preprocessData.call(@, data)
+    if typeof preprocessData == 'function'
+      data = preprocessData.call(@, data)
 
     grunt.file.write(filedest, JSON.stringify(data, options.replacer, options.space))
 
