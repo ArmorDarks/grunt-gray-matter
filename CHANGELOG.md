@@ -7,6 +7,7 @@
 
 ### Fixed
 - Fixed wrong paths in nested fixtures.
+- Fixed linting errors.
 
 ## 1.1.0
 

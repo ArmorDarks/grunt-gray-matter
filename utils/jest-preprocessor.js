@@ -3,7 +3,7 @@
 const coffee = require('coffee-script')
 
 module.exports = {
-  process(src, path) {
+  process (src, path) {
     if (path.endsWith('.coffee')) {
       return coffee.compile(src, { bare: true })
     }
