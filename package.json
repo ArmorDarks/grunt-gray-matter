@@ -25,6 +25,7 @@
     "lodash": "4.17.4"
   },
   "devDependencies": {
+    "babel-eslint": "7.1.1",
     "babel-jest": "18.0.0",
     "babel-polyfill": "6.22.0",
     "babel-preset-latest": "6.22.0",
@@ -33,19 +34,27 @@
     "grunt-contrib-clean": "1.0.0",
     "jest": "18.1.0",
     "jit-grunt": "0.10.0",
+    "standard": "8.6.0",
     "time-grunt": "1.4.0"
   },
   "engines": {
     "node": ">=0.10.0"
   },
   "scripts": {
-    "test": "jest",
+    "test": "standard && jest",
+    "lint": "standard",
     "test:watch": "jest --watch"
   },
   "babel": {
     "presets": [
       "latest"
     ]
+  },
+  "standard": {
+    "parser": "babel-eslint",
+    "env": {
+      "jest": true
+    }
   },
   "jest": {
     "moduleFileExtensions": [

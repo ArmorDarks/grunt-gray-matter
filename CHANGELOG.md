@@ -2,6 +2,9 @@
 
 ## HEAD
 
+### Added
+- Added standard.
+
 ### Fixed
 - Fixed wrong paths in nested fixtures.
 
