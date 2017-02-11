@@ -3,6 +3,8 @@ grunt-gray-matter [![Build Status](https://travis-ci.org/ArmorDarks/grunt-gray-m
 
 > A Grunt task for extracting data header from file contents using Gray Matter
 
+![grunt-gray-matter task demo](https://cloud.githubusercontent.com/assets/4460311/22854588/92609ace-f07a-11e6-8c83-5cbcc7a13a7b.gif)
+
 
 ## Getting Started
 
