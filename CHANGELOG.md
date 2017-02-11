@@ -3,10 +3,11 @@
 ## HEAD
 
 ### Changed
-- Internal optimizations with destructuring
+- Optimized internals with destructuring.
 
 ### Added
-- Jest for tests
+- Added Jest as tests runner.
+- Added tests of basic functionality.
 
 ## 1.0.0
 
