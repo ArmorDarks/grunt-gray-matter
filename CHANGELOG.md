@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.1.0
 
 ### Changed
 - Optimized internals with destructuring.
