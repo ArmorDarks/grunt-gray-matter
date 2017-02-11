@@ -1,4 +1,4 @@
-grunt-gray-matter
+grunt-gray-matter [![Build Status](https://travis-ci.org/ArmorDarks/grunt-gray-matter.svg?branch=master)](https://travis-ci.org/ArmorDarks/grunt-gray-matter)
 =================
 
 > A Grunt task for extracting data header from file contents using Gray Matter
