@@ -1,6 +1,6 @@
 exports[`Gray Matter task should produce correct matter file with defaults for multiple nested pages 1`] = `
 Object {
-  "tests/fixtures/nested/level1/level3/page4": Object {
+  "tests/fixtures/nested/level2/level3/page4": Object {
     "html": Object {
       "number": 123,
       "test": "Test value",
@@ -13,7 +13,7 @@ Object {
       "withTemplateNDoubleQuotes": "{{ templateValue }}",
     },
   },
-  "tests/fixtures/nested/level1/level3/page5": Object {
+  "tests/fixtures/nested/level2/level3/page5": Object {
     "html": Object {
       "number": 123,
       "test": "Test value",
@@ -26,7 +26,7 @@ Object {
       "withTemplateNDoubleQuotes": "{{ templateValue }}",
     },
   },
-  "tests/fixtures/nested/level1/page3": Object {
+  "tests/fixtures/nested/level2/page3": Object {
     "html": Object {
       "number": 123,
       "test": "Test value",
@@ -39,7 +39,7 @@ Object {
       "withTemplateNDoubleQuotes": "{{ templateValue }}",
     },
   },
-  "tests/fixtures/nested/level1/pageWithoutMatter": Object {
+  "tests/fixtures/nested/level2/pageWithoutMatter": Object {
     "html": Object {},
   },
   "tests/fixtures/nested/page1": Object {

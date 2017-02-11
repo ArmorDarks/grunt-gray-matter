@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Fixed
+- Fixed wrong paths in nested fixtures.
+
 ## 1.1.0
 
 ### Changed
