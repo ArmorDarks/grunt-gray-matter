@@ -102,7 +102,9 @@ Type: `Function` Default: `undefined`
 
 Allows to alter path (property) under which extracted Gray Matter content will be placed in `dest` JSON file.
 
-Will be invoked with injected following parameters:
+You can see [here](https://github.com/LotusTM/Kotsu/blob/master/tasks/data.coffee#L19) as Kotsu uses this option to mirror templates directory structure in final JSON.
+
+Will be invoked with injected values for following arguments:
 
 * `path` — formed after subtracting `options.baseDir` path of current `src`;
 * `src` — current `src` object.
@@ -117,9 +119,11 @@ Type: `Function` Default: `undefined`
 
 Allows to alter extracted Gray Matter data for each discovered `src`.
 
-Will be invoked with injected following parameters:
+As for an example, check out how Kotsu [injects additional data](https://github.com/LotusTM/Kotsu/blob/master/tasks/data.coffee#L22) for each page into final Matter data.
 
-* `matterData` — extracted Gray Matter data;
+Will be invoked with injected values for following arguments:
+
+* `matterData` — extracted Gray Matter data of current `src`;
 * `path` — formed after subtracting `options.baseDir` path of current `src`;
 * `src` — current `src` object.
 
@@ -135,7 +139,7 @@ Allows to alter final data, constructed from extracted Gray Matter data.
 
 Result of this function will be used for printing Object to `dest` file.
 
-Will be invoked with injected following parameters:
+Will be invoked with injected values for following arguments:
 
 * `data` — extracted and processed by `preprocessPath` and `preprocessMatterData` function (if specified) Gray Matter data.
 
