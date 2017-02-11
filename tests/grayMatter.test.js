@@ -1,3 +1,5 @@
+/* eslint-env jest */
+
 import { run, grunt } from '../utils/grunt'
 
 const { config, file: { readJSON } } = grunt

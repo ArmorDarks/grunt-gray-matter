@@ -51,10 +51,7 @@
     ]
   },
   "standard": {
-    "parser": "babel-eslint",
-    "env": {
-      "jest": true
-    }
+    "parser": "babel-eslint"
   },
   "jest": {
     "moduleFileExtensions": [
