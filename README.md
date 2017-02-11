@@ -45,11 +45,11 @@ grunt grayMatter
 
 ## The `grayMatter` task
 
-Task scans specified in `files` `src` files, reads Gray Matter (Front Matter) header with [Gray Matter](https://github.com/jonschlinkert/gray-matter) and outputs collected result in single JSON file to specified in `dest` file.
+Task scans specified in `files` `src` files, reads Gray Matter (Front Matter) header with [Gray Matter](https://github.com/jonschlinkert/gray-matter) and outputs collected result in form of JSON to specified `dest` file.
 
-Path of each discovered `src` will serve as property for `dest` JSON, under which extracted Gray Matter data of `src` will be placed.
+Path of each discovered `src` will serve as property in final JSON for extracted Gray Matter data of that `src`.
 
-Note, that for now few `src`es per same `dest` are unsupported and will result in JSON containing data only from last `src` set.
+Note, that for now few `src` sets with same `dest` are unsupported and will result in JSON containing data only from last `src` set.
 
 ### Options
 
@@ -215,9 +215,7 @@ Task should work as expected on Node >= 0.10.0, however, due to Jest dependencie
 
 ## Testing
 
-Run `npm test` to launch tests or `npm run test:watch` to watch tests.
-
-Observe how magic happens.
+Run `npm test` to launch tests or `npm run test:watch` to watch tests. Observe how magic happens.
 
 Testing requires Node >= 4.0.0.
 
