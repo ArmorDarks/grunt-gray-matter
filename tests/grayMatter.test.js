@@ -4,10 +4,7 @@ import { join } from 'path'
 const { config, file: { readJSON } } = grunt
 
 describe('Gray Matter task', () => {
-  beforeAll(async (done) => {
-    await run()
-    done()
-  })
+  beforeAll(() => run())
 
   it('should produce correct matter file with defaults for single page', () => {
     expect(readJSON(config('path.build.singleWithDefaults'))).toMatchSnapshot()
