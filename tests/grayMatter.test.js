@@ -1,5 +1,4 @@
 import { run, grunt } from '../utils/grunt'
-import { join } from 'path'
 
 const { config, file: { readJSON } } = grunt
 
