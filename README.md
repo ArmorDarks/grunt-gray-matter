@@ -30,12 +30,8 @@ Add minimal configuration for task in Gruntfile:
 grunt.initConfig
   grayMatter:
     build:
-      files: [
-        expand: true
-        cwd: 'source/templates'
-        src: ['{,**/}*.html']
-        dest: 'data/matter.json'
-      ]
+      src: 'source/templates/{,**/}*.html'
+      dest: 'data/matter.json'
 ```
 
 Finally, run task with following command:
@@ -205,12 +201,8 @@ Pass [delims](https://github.com/jonschlinkert/gray-matter#optionsdelims) parame
         # do something with extracted data
         return data
 
-    files: [
-      expand: true
-      cwd: 'source/templates'
-      src: ['{,**/}*.{nj,html}', '!{,**/}_*.{nj,html}']
-      dest: '/data/matter.json'
-    ]
+    src: 'source/templates/{,**/}*.html'
+    dest: 'data/matter.json'
 ```
 
 
