@@ -20,7 +20,7 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write} }) ->
 
     if not @files.length
       log.error('No files specified.')
-      return
+      return false
 
     { preprocessPath, preprocessMatterData, preprocessData } = options
     data = {}
@@ -32,7 +32,7 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write} }) ->
 
       if not file.src.length
         log.error("No source files specified for #{cyan(filedest)}.")
-        return
+        return false
 
       file.src.forEach (src) =>
         matterData = read(src, options).data

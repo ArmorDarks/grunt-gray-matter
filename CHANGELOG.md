@@ -6,6 +6,7 @@
 - Added standard.
 
 ### Fixed
+- When there is no `src` provided, Grunt will return `false` according to requirements.
 - Fixed wrong paths in nested fixtures.
 - Fixed linting errors.
 
