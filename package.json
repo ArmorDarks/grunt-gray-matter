@@ -60,7 +60,7 @@
     ],
     "transform": {
       "^.+\\.js?$": "babel-jest",
-      "^.+\\.coffee$": "<rootDir>/utils/jest-preprocessor.js"
+      "^.+\\.coffee$": "<rootDir>/tests/utils/jest-preprocessor.js"
     },
     "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.(coffee|js)?$"
   }
