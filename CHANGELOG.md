@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.2.0
 
 ### Changed
 - Task now properly works with `expand: true` option specified in `files`. If you used expanded files in task config and still want to receive monolith JSON file, use this pattern instead:

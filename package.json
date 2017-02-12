@@ -1,6 +1,6 @@
 {
   "name": "grunt-gray-matter",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A Grunt task for extracting data header from file contents using Gray Matter",
   "homepage": "https://github.com/ArmorDarks/grunt-gray-matter",
   "author": "Serj Lavrin (https://github.com/ArmorDarks)",
