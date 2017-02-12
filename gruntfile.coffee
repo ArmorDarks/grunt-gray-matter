@@ -19,6 +19,7 @@ module.exports = (grunt) ->
         singleWithDefaults: '<%= path.build.root %>/singleWithDefaults.json'
         multipleWithDefaults: '<%= path.build.root %>/multipleWithDefaults.json'
         nestedWithDefaults: '<%= path.build.root %>/nestedWithDefaults.json'
+        expandedNestedWithDefaults: '<%= path.build.root %>/expandedNestedWithDefaults'
 
   grunt.loadTasks grunt.config('path.tasks')
 
@@ -30,11 +31,15 @@ module.exports = (grunt) ->
       src: '<%= path.source.multiple %>/*'
       dest: '<%= path.build.multipleWithDefaults %>'
     nestedWithDefaults:
+      src: '<%= path.source.nested %>/{,**/}*.html'
+      dest: '<%= path.build.nestedWithDefaults %>'
+    expandedNestedWithDefaults:
       files: [
         expand: true
         cwd: '<%= path.source.nested %>'
         src: ['{,**/}*.html']
-        dest: '<%= path.build.nestedWithDefaults %>'
+        ext: '.json'
+        dest: '<%= path.build.expandedNestedWithDefaults %>'
       ]
 
   grunt.config 'clean',

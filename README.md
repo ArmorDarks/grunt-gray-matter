@@ -47,8 +47,6 @@ Task scans specified in `files` `src` files, reads Gray Matter (Front Matter) he
 
 Path of each discovered `src` will serve as property in final JSON for extracted Gray Matter data of that `src`.
 
-Note, that for now few `src` sets with same `dest` are unsupported and will result in JSON containing data only from last `src` set.
-
 ### Options
 
 #### options.baseDir

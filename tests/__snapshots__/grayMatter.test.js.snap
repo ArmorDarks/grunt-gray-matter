@@ -1,4 +1,4 @@
-exports[`Gray Matter task should produce correct matter file with defaults for multiple nested pages 1`] = `
+exports[`Gray Matter task should produce correct matter file with defaults for multiple nested sources 1`] = `
 Object {
   "tests/fixtures/nested/level2/level3/page4": Object {
     "html": Object {
@@ -71,7 +71,7 @@ Object {
 }
 `;
 
-exports[`Gray Matter task should produce correct matter file with defaults for multiple pages 1`] = `
+exports[`Gray Matter task should produce correct matter file with defaults for multiple sources 1`] = `
 Object {
   "tests/fixtures/multiple/page1": Object {
     "html": Object {
@@ -118,13 +118,119 @@ Object {
 }
 `;
 
-exports[`Gray Matter task should produce correct matter file with defaults for single page 1`] = `
+exports[`Gray Matter task should produce correct matter file with defaults for single source 1`] = `
 Object {
   "tests/fixtures/single/page": Object {
     "html": Object {
       "number": 123,
       "test": "Test value",
       "title": "Page",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 1`] = `
+Object {
+  "tests/fixtures/nested/page1": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page1",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 2`] = `
+Object {
+  "tests/fixtures/nested/page2": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page2",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 3`] = `
+Object {
+  "tests/fixtures/nested/level2/page3": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page3",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 4`] = `
+Object {
+  "tests/fixtures/nested/level2/pageWithoutMatter": Object {
+    "html": Object {},
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 5`] = `
+Object {
+  "tests/fixtures/nested/level2/pageWithoutMatter": Object {
+    "html": Object {},
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 6`] = `
+Object {
+  "tests/fixtures/nested/level2/level3/page4": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page4",
+      "withDoubleQuotes": "Value with quotes",
+      "withQuotes": "Value with quotes",
+      "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",
+      "withSpaces": "Spaced value",
+      "withTemplate": "{{ templateValue }}",
+      "withTemplateNDoubleQuotes": "{{ templateValue }}",
+    },
+  },
+}
+`;
+
+exports[`Gray Matter task should produce correct matter files with defaults for multiple nested expanded sources 7`] = `
+Object {
+  "tests/fixtures/nested/level2/level3/page5": Object {
+    "html": Object {
+      "number": 123,
+      "test": "Test value",
+      "title": "Page5",
       "withDoubleQuotes": "Value with quotes",
       "withQuotes": "Value with quotes",
       "withQuotesInside": "Value\"with\'qoutes\'ins\"ide",

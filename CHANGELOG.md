@@ -15,6 +15,7 @@
 
 ### Added
 - Added standard.
+- Added test case for expanded files.
 
 ### Fixed
 - Task now will work properly when `expand: true` option specified in `files` by generating standalone JSON file per each source. `dest` in expanded files expect path only instead of path with filename.
