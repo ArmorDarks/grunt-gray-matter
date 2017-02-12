@@ -1,7 +1,7 @@
 import gt from 'grunt'
 import gruntfile from '../gruntfile.coffee'
 
-const grunt = gruntfile(gt)
+const grunt = gruntfile.call(gt, gt)
 const { util: { spawn } } = grunt
 
 /**
@@ -11,7 +11,7 @@ const { util: { spawn } } = grunt
  * @return {promise} With resolved status on succesful pass, or reject with `new Error()` on failure
  */
 const run = (args) => new Promise((resolve, reject) =>
-  spawn({ cmd: 'grunt', args }, (error) => error ? reject(new Error(error)) : resolve('Done!')
-))
+  spawn({ cmd: 'grunt', args }, (error) => error ? reject(new Error(error)) : resolve('Done!'))
+)
 
 export { grunt, run }
