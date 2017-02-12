@@ -94,18 +94,20 @@ instead of
 
 Type: `Function` Default: `undefined`
 
-Allows to alter path (property) under which extracted Gray Matter content will be placed in `dest` JSON file.
+Allows to alter path (property) under which extracted Matter data will be placed in `dest` JSON file.
+
+Nesting will be done with [_.set](https://lodash.com/docs/4.17.4#set), thus any `.` in path or array of strings will result in nesting data deeper.
 
 You can see [here](https://github.com/LotusTM/Kotsu/blob/master/tasks/data.coffee#L19) as Kotsu uses this option to mirror templates directory structure in final JSON.
 
 Will be invoked with injected values for following arguments:
 
-* `path` — formed after subtracting `options.baseDir` path of current `src`;
-* `src` — current `src` object.
+* `path` — formed after subtracting `options.baseDir` path of current `src`, used to nest data in final JSON;
+* `filepath` — filepath of current `src`.
 
 `this` will correspond to current `file` of task.
 
-Should return altered path in form of `String`.
+Should return altered path in form of `String` or `String[]`.
 
 #### options.preprocessMatterData
 
@@ -117,9 +119,9 @@ As for an example, check out how Kotsu [injects additional data](https://github.
 
 Will be invoked with injected values for following arguments:
 
-* `matterData` — extracted Gray Matter data of current `src`;
-* `path` — formed after subtracting `options.baseDir` path of current `src`;
-* `src` — current `src` object.
+* `matterData` — extracted Matter data of current `src`;
+* `path` — formed after subtracting `options.baseDir` path of current `src`, used to nest data in final JSON;
+* `filepath` — filepath of current `src`.
 
 `this` will correspond to current `file` object.
 
@@ -129,13 +131,13 @@ Should return altered Gray Matter data in form of `Object`.
 
 Type: `Function` Default: `undefined`
 
-Allows to alter final data, constructed from extracted Gray Matter data.
+Allows to alter final data, constructed from extracted Matter data.
 
 Result of this function will be used for printing Object to `dest` file.
 
 Will be invoked with injected values for following arguments:
 
-* `data` — extracted and processed by `preprocessPath` and `preprocessMatterData` function (if specified) Gray Matter data.
+* `data` — extracted and assembled data from all current `src`es Matter data, processed by `preprocessPath` and `preprocessMatterData` (if specified).
 
 `this` will correspond to current `this` of task.
 
