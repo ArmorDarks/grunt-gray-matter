@@ -2,9 +2,9 @@
 { set } = require('lodash')
 { cyan } = require('chalk')
 
-module.exports = (grunt) ->
+module.exports = ({ registerMultiTask, log, verbose, file: { write} }) ->
 
-  grunt.registerMultiTask 'grayMatter', 'Extract data from specified files with Gray Matter', () ->
+  registerMultiTask 'grayMatter', 'Extract data from specified files with Gray Matter', () ->
     options = @options(
       baseDir: ''
       preprocessPath: undefined
@@ -19,7 +19,7 @@ module.exports = (grunt) ->
     )
 
     if not @files.length
-      grunt.log.error('No files specified.')
+      log.error('No files specified.')
       return
 
     { preprocessPath, preprocessMatterData, preprocessData } = options
@@ -31,7 +31,7 @@ module.exports = (grunt) ->
       filedest = file.orig.dest
 
       if not file.src.length
-        grunt.log.error("No source files specified for #{cyan(filedest)}.")
+        log.error("No source files specified for #{cyan(filedest)}.")
         return
 
       file.src.forEach (src) =>
@@ -50,8 +50,8 @@ module.exports = (grunt) ->
     if typeof preprocessData == 'function'
       data = preprocessData.call(@, data)
 
-    grunt.file.write(filedest, JSON.stringify(data, options.replacer, options.space))
+    write(filedest, JSON.stringify(data, options.replacer, options.space))
 
-    grunt.log.ok "#{cyan(processedFiles.length)} files processed"
-    grunt.verbose.ok "#{processedFiles.map((file) => "\nProcessed: #{cyan(file)}")}"
-    grunt.verbose.ok "File #{cyan(filedest)} created"
+    log.ok "#{cyan(processedFiles.length)} files processed"
+    verbose.ok "#{processedFiles.map((file) => "\nProcessed: #{cyan(file)}")}"
+    verbose.ok "File #{cyan(filedest)} created"
