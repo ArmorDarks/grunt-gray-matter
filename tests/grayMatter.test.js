@@ -1,9 +1,8 @@
 /* eslint-env jest */
 
 import { run, grunt } from './utils/grunt'
-import { join } from 'path'
 
-const { config, file: { readJSON } } = grunt
+const { config, file: { expand, readJSON } } = grunt
 
 describe('Gray Matter task', () => {
   beforeAll(() => run())
@@ -21,14 +20,10 @@ describe('Gray Matter task', () => {
   })
 
   it('should produce correct matter files with defaults for multiple nested expanded sources', () => {
-    const dest = config('path.build.expandedNestedWithDefaults')
+    const buildedFilesPaths = expand({ filter: 'isFile' }, `${config('path.build.expandedNestedWithDefaults')}/**`)
 
-    expect(readJSON(join(dest, 'page1.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'page2.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'level2/page3.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'level2/pageWithoutMatter.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'level2/pageWithoutMatter.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'level2/level3//page4.json'))).toMatchSnapshot()
-    expect(readJSON(join(dest, 'level2/level3//page5.json'))).toMatchSnapshot()
+    expect(buildedFilesPaths).toMatchSnapshot()
+
+    buildedFilesPaths.forEach((filepath) => expect(readJSON(filepath)).toMatchSnapshot())
   })
 })
