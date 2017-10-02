@@ -2,7 +2,7 @@
 { set } = require('lodash')
 { cyan } = require('chalk')
 
-module.exports = ({ registerMultiTask, log, verbose, file: { write} }) ->
+module.exports = ({ registerMultiTask, log, verbose, file: { write } }) ->
 
   registerMultiTask 'grayMatter', 'Extract data from specified files with Gray Matter', () ->
     options = @options
