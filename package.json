@@ -35,7 +35,7 @@
     "coffee-script": "~1.10.0",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
-    "jest": "18.1.0",
+    "jest": "21.2.1",
     "jit-grunt": "0.10.0",
     "standard": "8.6.0",
     "time-grunt": "1.4.0"
