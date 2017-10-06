@@ -5,7 +5,7 @@ import { run, grunt } from './utils/grunt'
 const { config, file: { expand, readJSON } } = grunt
 
 describe('Gray Matter task', () => {
-  beforeAll(() => run())
+  beforeAll(() => run(['test']))
 
   it('should produce correct matter file with defaults for single source', () => {
     expect(readJSON(config('path.build.singleWithDefaults'))).toMatchSnapshot()
