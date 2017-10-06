@@ -45,8 +45,8 @@
   ],
   "scripts": {
     "test": "standard && jest",
-    "lint": "standard",
-    "test:watch": "jest --watch"
+    "test:watch": "jest --watch",
+    "prepublishOnly": "npm test"
   },
   "standard": {
     "parser": "babel-eslint"
