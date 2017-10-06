@@ -1,6 +1,6 @@
 # Changelog
 
-## HEAD
+## 1.3.0
 
 ### Added
 - Added error catching for Gray Matter with information about file which caused error for easier debugging.
