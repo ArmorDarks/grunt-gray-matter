@@ -44,8 +44,9 @@
     "tasks"
   ],
   "scripts": {
-    "test": "standard && jest",
+    "lint": "standard",
     "test:watch": "jest --watch",
+    "test": "npm run lint && jest",
     "prepublishOnly": "npm test"
   },
   "standard": {
