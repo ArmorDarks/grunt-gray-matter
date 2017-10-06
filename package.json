@@ -25,7 +25,7 @@
   "dependencies": {
     "chalk": "2.1.0",
     "gray-matter": "3.0.8",
-    "lodash": "4.17.4"
+    "lodash.set": "4.3.2"
   },
   "devDependencies": {
     "grunt": "1.0.1",

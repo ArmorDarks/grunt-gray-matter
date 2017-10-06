@@ -21,6 +21,7 @@
 
    No longer task will silently fail when Front Matter contains syntax errors :guitar:
 
+- Replaced `lodash` with `lodash.set` to minimize dependencies.
 - Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
 - Added `.editorconfig`.
 

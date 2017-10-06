@@ -1,6 +1,6 @@
 const { read } = require('gray-matter')
 const { cyan, red } = require('chalk')
-const set = require('lodash/set')
+const set = require('lodash.set')
 
 module.exports = ({ registerMultiTask, log, verbose, file: { write }, util: { pluralize } }) =>
   registerMultiTask('grayMatter', 'Extract data from specified files with Gray Matter', function () {
