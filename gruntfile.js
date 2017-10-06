@@ -1,5 +1,5 @@
-module.exports = (grunt) => {
-  require('time-grunt')(grunt)
+module.exports = (grunt, isTest) => {
+  if (!isTest) require('time-grunt')(grunt)
   require('jit-grunt')(grunt)
 
   grunt.initConfig({
