@@ -10,6 +10,10 @@
 ### Changed
 - Raised minimum required Node version to `6.0`.
 - Updated dependencies.
+- Updated Gray Matter to version `3.0.8`, which resolved [gray-matter#37](https://github.com/jonschlinkert/gray-matter/issues/37).
+
+   No longer task will silently fail when Front Matter contains syntax errors :guitar:
+
 - Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
 - Added `.editorconfig`.
 
