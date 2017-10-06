@@ -33,4 +33,8 @@ describe('Gray Matter task', () => {
       buildedFilesPaths.forEach((filepath) => expect(readJSON(filepath)).toMatchSnapshot())
     })
   )
+
+  it('should error on file with error', () =>
+    expect(runGrunt(['grayMatter:withError'])).rejects.toBeDefined()
+  )
 })

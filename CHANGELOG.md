@@ -3,6 +3,12 @@
 ## HEAD
 
 ### Added
+- Added error catching for Gray Matter with information about file which caused error for easier debugging.
+
+   Now whenever there is an error in Fron Matter, task will not silently ignore it nor will shut down completely. Instead, it will run all files and report all encountered errors.
+
+   If there are any errors by the end of the task, it will throw and exception.
+
 - Added `package.json` `main` property pointing to the task file.
 - Added `package.json` `files` property to ensure that task directory will be always preserved.
 - Added `snazzy` for better `standard` output.

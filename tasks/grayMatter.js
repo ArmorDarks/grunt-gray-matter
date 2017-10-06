@@ -1,8 +1,8 @@
 const { read } = require('gray-matter')
-const { set } = require('lodash')
 const { cyan } = require('chalk')
+const set = require('lodash/set')
 
-module.exports = ({ registerMultiTask, log, verbose, file: { write } }) =>
+module.exports = ({ registerMultiTask, log, verbose, file: { write }, util: { pluralize } }) =>
   registerMultiTask('grayMatter', 'Extract data from specified files with Gray Matter', function () {
     const options = this.options({
       baseDir: '',
@@ -21,6 +21,7 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write } }) =>
 
     const { preprocessPath, preprocessMatterData, preprocessData } = options
     let processedFiles = 0
+    let errors = 0
 
     this.files.forEach((file) => {
       const { dest, src } = file
@@ -29,7 +30,16 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write } }) =>
       if (!src.length) return log.error(`No source files specified for ${cyan(dest)}.`)
 
       src.forEach((filepath) => {
-        let matterData = read(filepath, options).data
+        let matter
+
+        try {
+          matter = read(filepath, options)
+        } catch (error) {
+          errors++
+          return log.error(`Error in ${filepath}:\n\n${error}`)
+        }
+
+        let matterData = matter.data
         let path = filepath.replace(options.baseDir, '')
 
         if (typeof preprocessPath === 'function') {
@@ -41,7 +51,7 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write } }) =>
         }
 
         set(data, path, matterData)
-        processedFiles += 1
+        processedFiles++
         verbose.ok(`\nProcessed: ${cyan(filepath)}`)
       })
 
@@ -52,6 +62,8 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write } }) =>
       write(dest, JSON.stringify(data, options.replacer, options.space))
       verbose.ok(`File ${cyan(dest)} created`)
     })
+
+    if (errors) throw new Error(`${errors} ${pluralize(errors, 'error/errors')} has been encountered during parsing Gray Matter.\nSee log above for details.`)
 
     log.ok(`${cyan(processedFiles)} files processed`)
   })

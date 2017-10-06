@@ -10,7 +10,8 @@ module.exports = (grunt, isTest) => {
         root: 'tests/fixtures',
         single: '<%= path.source.root %>/single/page.html',
         multiple: '<%= path.source.root %>/multiple',
-        nested: '<%= path.source.root %>/nested'
+        nested: '<%= path.source.root %>/nested',
+        withError: '<%= path.source.root %>/withError'
       },
 
       build: {
@@ -18,7 +19,8 @@ module.exports = (grunt, isTest) => {
         singleWithDefaults: '<%= path.build.root %>/singleWithDefaults.json',
         multipleWithDefaults: '<%= path.build.root %>/multipleWithDefaults.json',
         nestedWithDefaults: '<%= path.build.root %>/nestedWithDefaults.json',
-        expandedNestedWithDefaults: '<%= path.build.root %>/expandedNestedWithDefaults'
+        expandedNestedWithDefaults: '<%= path.build.root %>/expandedNestedWithDefaults',
+        withError: '<%= path.build.root %>/withError.json'
       }
     }
   })
@@ -45,7 +47,11 @@ module.exports = (grunt, isTest) => {
         src: ['{,**/}*.html'],
         ext: '.json',
         dest: '<%= path.build.expandedNestedWithDefaults %>'
-      }]
+      }],
+    },
+    withError: {
+      src: '<%= path.source.withError %>/*',
+      dest: '<%= path.build.withError %>'
     }
   })
 
