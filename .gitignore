@@ -27,11 +27,8 @@ lib-cov
 pids
 logs
 results
-npm-debug.log
 node_modules
-
-## Sass
-.sass-cache
+npm-debug.log
 
 ## Build folder
 build
