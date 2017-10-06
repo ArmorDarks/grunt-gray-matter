@@ -18,11 +18,11 @@ describe('Gray Matter task', () => {
     )
   )
 
-  it('should produce correct matter file with defaults for multiple nested sources', () => {
+  it('should produce correct matter file with defaults for multiple nested sources', () =>
     runGrunt(['grayMatter:nestedWithDefaults']).then(() =>
       expect(readJSON(config('path.build.nestedWithDefaults'))).toMatchSnapshot()
     )
-  })
+  )
 
   it('should produce correct matter files with defaults for multiple nested expanded sources', () =>
     runGrunt(['grayMatter:expandedNestedWithDefaults']).then(() => {
