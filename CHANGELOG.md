@@ -5,6 +5,9 @@
 ### Changed
 - Updated dependencies.
 - Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
+- Added `.editorconfig`.
+
+   Somehow it was missing for all that time, but still I slept without nightmares.
 
 ## 1.2.0
 
