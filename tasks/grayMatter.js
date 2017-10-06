@@ -1,5 +1,5 @@
 const { read } = require('gray-matter')
-const { cyan } = require('chalk')
+const { cyan, red } = require('chalk')
 const set = require('lodash/set')
 
 module.exports = ({ registerMultiTask, log, verbose, file: { write }, util: { pluralize } }) =>
@@ -28,6 +28,7 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write }, util: { pl
       let data = {}
 
       if (!src.length) return log.error(`No source files specified for ${cyan(dest)}.`)
+      if (!dest) return log.error('No dest file specified')
 
       src.forEach((filepath) => {
         let matter
@@ -63,7 +64,10 @@ module.exports = ({ registerMultiTask, log, verbose, file: { write }, util: { pl
       verbose.ok(`File ${cyan(dest)} created`)
     })
 
-    if (errors) throw new Error(`${errors} ${pluralize(errors, 'error/errors')} has been encountered during parsing Gray Matter.\nSee log above for details.`)
+    const processedMessage = `${cyan(processedFiles)} ${pluralize(processedFiles, 'file/files')} processed`
+    const failedMessage = `${errors ? `, ${red(errors)} failed` : ''}`
 
-    log.ok(`${cyan(processedFiles)} files processed`)
+    log[errors ? 'error' : 'ok'](processedMessage + failedMessage)
+
+    if (errors) throw new Error(`${errors} ${pluralize(errors, 'error/errors')} has been encountered during parsing Gray Matter.\nSee log above for details.`)
   })

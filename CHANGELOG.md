@@ -9,6 +9,7 @@
 
    If there are any errors by the end of the task, it will throw and exception.
 
+- Added better reporting about successfully processed and failed files.
 - Added `package.json` `main` property pointing to the task file.
 - Added `package.json` `files` property to ensure that task directory will be always preserved.
 - Added `snazzy` for better `standard` output.
