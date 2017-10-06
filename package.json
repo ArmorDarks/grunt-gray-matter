@@ -33,6 +33,7 @@
     "grunt-contrib-clean": "1.0.0",
     "jest": "21.2.1",
     "jit-grunt": "0.10.0",
+    "snazzy": "6.0.0",
     "standard": "8.6.0",
     "time-grunt": "1.4.0"
   },
@@ -44,7 +45,7 @@
     "tasks"
   ],
   "scripts": {
-    "lint": "standard",
+    "lint": "standard | snazzy",
     "test:watch": "jest --watch",
     "test": "npm run lint && jest",
     "prepublishOnly": "npm test"
