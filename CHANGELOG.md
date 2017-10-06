@@ -15,6 +15,8 @@
 
    Somehow it was missing for all that time, but still I slept without nightmares.
 
+- Other internal cleanups and improvements.
+
 ## 1.2.0
 
 ### Changed
