@@ -2,6 +2,10 @@
 
 ## HEAD
 
+### Added
+- Added `package.json` `main` property pointing to the task file.
+- Added `package.json` `files` property to ensure that task directory will be always preserved.
+
 ### Changed
 - Updated dependencies.
 - Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
