@@ -51,5 +51,11 @@
   },
   "standard": {
     "parser": "babel-eslint"
+  },
+  "jest": {
+    "testPathIgnorePatterns": [
+      "/.git/",
+      "/node_modules/"
+    ]
   }
 }
