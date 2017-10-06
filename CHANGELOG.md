@@ -4,6 +4,7 @@
 
 ### Changed
 - Updated dependencies.
+- Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
 
 ## 1.2.0
 
