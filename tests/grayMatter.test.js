@@ -1,10 +1,10 @@
 /* eslint-env jest */
 
-const { run, grunt } = require('./utils/grunt')
+const { runGrunt, grunt } = require('./utils/grunt')
 const { config, file: { expand, readJSON } } = grunt
 
 describe('Gray Matter task', () => {
-  beforeAll(() => run(['test']))
+  beforeAll(() => runGrunt(['test']))
 
   it('should produce correct matter file with defaults for single source', () => {
     expect(readJSON(config('path.build.singleWithDefaults'))).toMatchSnapshot()
