@@ -1,17 +1,19 @@
-import gt from 'grunt'
-import gruntfile from '../../gruntfile'
+const gt = require('grunt')
+const gruntfile = require('../../gruntfile')
 
 const grunt = gruntfile.call(gt, gt)
-const { util: { spawn } } = grunt
 
 /**
  * Run Grunt instance with specified tasks as args
- * @param  {string[]} [args] Arrays of arguments to be called with Grunt instance, like task names.
- *                           When not specified will run `default` task
+ * @param {string[]} [args] Arrays of arguments to be called with Grunt instance, like task names.
+ *                          When not specified will run `default` task
  * @return {promise} With resolved status on succesful pass, or reject with `new Error()` on failure
  */
 const run = (args) => new Promise((resolve, reject) =>
-  spawn({ cmd: 'grunt', args }, (error) => error ? reject(new Error(error)) : resolve('Done!'))
+  grunt.util.spawn({ cmd: 'grunt', args }, (error) => error ? reject(new Error(error)) : resolve('Done!'))
 )
 
-export { grunt, run }
+module.exports = {
+  grunt,
+  run
+}

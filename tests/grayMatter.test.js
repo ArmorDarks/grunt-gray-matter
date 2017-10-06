@@ -1,7 +1,6 @@
 /* eslint-env jest */
 
-import { run, grunt } from './utils/grunt'
-
+const { run, grunt } = require('./utils/grunt')
 const { config, file: { expand, readJSON } } = grunt
 
 describe('Gray Matter task', () => {
