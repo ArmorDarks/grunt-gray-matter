@@ -1,5 +1,10 @@
 # Changelog
 
+## HEAD
+
+### Changed
+- Updated dependencies.
+
 ## 1.2.0
 
 ### Changed
