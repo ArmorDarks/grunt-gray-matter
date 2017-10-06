@@ -28,10 +28,7 @@
     "lodash": "4.17.4"
   },
   "devDependencies": {
-    "babel-eslint": "7.1.1",
-    "babel-jest": "18.0.0",
-    "babel-polyfill": "6.22.0",
-    "babel-preset-latest": "6.22.0",
+    "babel-eslint": "8.0.0",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
     "jest": "21.2.1",
@@ -46,11 +43,6 @@
     "test": "standard && jest",
     "lint": "standard",
     "test:watch": "jest --watch"
-  },
-  "babel": {
-    "presets": [
-      "latest"
-    ]
   },
   "standard": {
     "parser": "babel-eslint"
