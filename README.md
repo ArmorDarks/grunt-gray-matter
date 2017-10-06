@@ -208,7 +208,9 @@ Pass [delims](https://github.com/jonschlinkert/gray-matter#optionsdelims) parame
 
 ## Node support
 
-Task should work as expected on Node >= 0.10.0, however, due to Jest dependencies, tests will fail on any Node < 4.0.0.
+Requires Node 6.0 or higher.
+
+Just in case, `grunt-gray-matter` 1.2.0 was the last version to support Node 0.10.0. But better go update your Node. Seriously.
 
 
 ## Testing

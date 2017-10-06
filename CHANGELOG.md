@@ -8,6 +8,7 @@
 - Added `snazzy` for better `standard` output.
 
 ### Changed
+- Raised minimum required Node version to `6.0`.
 - Updated dependencies.
 - Grunt and task files rewritten in pure JavaScript. Sorry, CoffeeScript :broken_heart:
 - Added `.editorconfig`.
