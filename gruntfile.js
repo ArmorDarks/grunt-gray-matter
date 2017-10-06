@@ -47,7 +47,7 @@ module.exports = (grunt, isTest) => {
         src: ['{,**/}*.html'],
         ext: '.json',
         dest: '<%= path.build.expandedNestedWithDefaults %>'
-      }],
+      }]
     },
     withError: {
       src: '<%= path.source.withError %>/*',
