@@ -54,6 +54,7 @@
     "parser": "babel-eslint"
   },
   "jest": {
+    "testEnvironment": "node",
     "testPathIgnorePatterns": [
       "/.git/",
       "/node_modules/"
